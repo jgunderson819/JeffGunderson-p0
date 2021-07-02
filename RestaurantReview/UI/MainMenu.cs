@@ -23,7 +23,9 @@ namespace UI
                 case "0":
                     return "Exit";
                 case "1";
-                    return (RestaurantMenucd)
+                    return "RestaurantMenuc"
+                    default:
+                    return "Unknown";
             }
         }
     }
