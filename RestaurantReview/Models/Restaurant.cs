@@ -22,6 +22,12 @@ namespace Models
             Name = p_name;
         }
 
+        public Restaurant(string name, string state)
+        {
+            this.Name = name;
+            this.State = state;
+
+        }
         public string Name { get; set; };
 
         public string City
