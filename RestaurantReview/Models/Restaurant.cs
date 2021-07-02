@@ -44,7 +44,7 @@ namespace Models
         }
         public string State { get; set; }
 
-
+        public List<Review> Reviews { get; set; }
 
 
     }
