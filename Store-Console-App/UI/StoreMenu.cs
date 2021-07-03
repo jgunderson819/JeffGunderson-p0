@@ -1,4 +1,5 @@
 using System;
+using System.Threading;
 
 namespace UI
 {
@@ -8,23 +9,28 @@ namespace UI
         {
             Console.WriteLine("Welcome to Store Menu!");
             Console.WriteLine("What would you like to do");
-            Console.WriteLine("[2] Add a store");
-            Console.WriteLine("[1] Give list of stores");
+            Console.WriteLine("[2] Add a Store");
+            Console.WriteLine("[1] Give list of Stores");
             Console.WriteLine("[0] Go Back");
         }
 
-        public string YourChoice()
+        public MenuType YourChoice()
         {
             string userChoice = Console.ReadLine();
 
             switch (userChoice)
             {
                 case "0":
-                    return "MainMenu";
+                    return MenuType.MainMenu;
                 case "1":
-                    return "RestaurantMenu";
+                    return MenuType.ShowStoreMenu;
+                case "2":
+                    return MenuType.AddStoreMenu;
                 default:
-                    return "Unknown";
+                    Console.WriteLine("Input was not correct");
+                    Console.WriteLine("Press Enter to continue");
+                    Console.ReadLine();
+                    return MenuType.StoreMenu;
             }
         }
     }
