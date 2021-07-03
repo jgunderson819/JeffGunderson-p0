@@ -6,7 +6,21 @@ using Models;
 
 namespace DL
 {
-    public class RepositoryCust : IRepositoryCust
+    public class NewBaseType
+    {
+        public Customers GetCustomers(Customers p_cust)
+        {
+            this.p_cust = p_cust;
+            if (p_cust is null)
+            {
+                throw new ArgumentNullException(nameof(p_cust));
+            }
+
+            throw new System.NotImplementedException();
+        }
+    }
+
+    public class RepositoryCust : NewBaseType, IRepositoryCust
     {
         private const string _filePath = "./../RRDL/Database/Customers.json";
         private string _jsonString;
@@ -34,10 +48,6 @@ namespace DL
             //This will return a list of restaurant from the jsonString that came from 
             return JsonSerializer.Deserialize<List<Customers>>(_jsonString);
         }
-
-        public Customers GetCustomers(Customers p_cust)
-        {
-            throw new System.NotImplementedException();
-        }
+        private readonly Customers p_cust;
     }
 }
