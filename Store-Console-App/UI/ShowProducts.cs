@@ -5,23 +5,23 @@ using Models;
 
 namespace UI
 {
-    public class ShowCustomersMenu : IMenu
+    public class ShowProductsMenu : IMenu
     {
-        private ICustomersBL _stBL;
-        public ShowCustomersMenu(ICustomersBL p_st)
+        private IProductsBL _stBL;
+        public ShowProductMenu(IProductsBL p_st)
         {
-            _custBL = p_cust;
+            _prodBL = p_prod;
         }
         public void Menu()
         {
-            Console.WriteLine("List of Customers");
+            Console.WriteLine("List of Products");
 
-            List<Customers> Customers = _custBL.GetAllStores();
+            List<Customers> Products = _prodBL.GetAllStores();
 
-            foreach (Customers cust in Customers)
+            foreach (Customers prod in Products)
             {
                 Console.WriteLine("=============================");
-                Console.WriteLine(cust);
+                Console.WriteLine(prod);
                 Console.WriteLine("=============================");
             }
 
@@ -35,12 +35,12 @@ namespace UI
             switch (userInput)
             {
                 case "0":
-                    return MenuType.CustomersMenu;
+                    return MenuType.ProductsMenu;
                 default:
                     Console.WriteLine("Input was not correct");
                     Console.WriteLine("Press Enter to continue");
                     Console.ReadLine();
-                    return MenuType.ShowCustomersMenu;
+                    return MenuType.ShowProductsMenu;
             }
         }
     }
