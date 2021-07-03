@@ -28,5 +28,7 @@ namespace DL
         /// <param name="p_prod">This is the Products object that will be added to the database</param>
         /// <returns>Will return the Products object we just added</returns>
         Restaurant AddProducts(Products p_prod);
+        Products GetProducts(Products p_prod);
+        Products GetProducts(Products p_prod);
     }
 }

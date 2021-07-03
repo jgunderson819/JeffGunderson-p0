@@ -6,7 +6,12 @@ using Modelc;
 
 namespace DL
 {
-    public class RepositoryProd : IRepositoryProd
+    public class NewBaseType
+    {
+        public Products GetProducts(Products p_prod) => throw new System.NotImplementedException();
+    }
+
+    public class RepositoryProd : NewBaseType, IRepositoryProd
     {
         private const string _filePath = "./../RRDL/Database/Products.json";
         private string _jsonString;
@@ -33,11 +38,6 @@ namespace DL
 
             //This will return a list of restaurant from the jsonString that came from 
             return JsonSerializer.Deserialize<List<Products>>(_jsonString);
-        }
-
-        public Products GetProducts(Products p_prod)
-        {
-            throw new System.NotImplementedException();
         }
     }
 }
