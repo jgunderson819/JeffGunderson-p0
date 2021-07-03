@@ -39,7 +39,7 @@ namespace Models
         }
         public string State { get; set; }
 
-        public List<Customers> Reviews { get; set; }
+        public List<Customers> ReviewsCust { get; set; }
 
         public override string ToString()
         {
