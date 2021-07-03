@@ -28,5 +28,6 @@ namespace DL
         /// <param name="p_cust">This is the Customers object that will be added to the database</param>
         /// <returns>Will return the Customers object we just added</returns>
         Customers AddCustomers(Customers p_cust);
+        Customers GetCustomers(Customers p_cust);
     }
 }
