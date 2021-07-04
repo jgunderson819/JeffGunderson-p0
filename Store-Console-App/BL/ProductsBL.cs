@@ -23,9 +23,6 @@ namespace BL
             return _repo.AddProducts(p_prod);
         }
 
-        public List<Products> GetAllProducts()
-        {
-            return _repo.GetAllProducts();
-        }
+        public List<Products> GetAllProducts() => _repo.GetAllProducts();
     }
 }
