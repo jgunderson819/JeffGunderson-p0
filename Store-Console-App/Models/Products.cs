@@ -16,6 +16,24 @@ namespace Models
         {
             Name = p_name;
         }
+        public Products(string name, string price)
+        {
+            this.Name = name;
+            this.Price = price;
+
+        }
+        public Products(string name, string price)
+        {
+            this.Name = name;
+            this.Price = price;
+
+        }
+        public Products(string name, string price)
+        {
+            this.Name = name;
+            this.Price = price;
+
+        }
         public string Name { get; set; }
         public string Description
         {
@@ -38,7 +56,8 @@ namespace Models
 
         public override string ToString()
         {
-            return $"Name: {Name}, Desc: {Description}, Price: {Price}";
+            string v = $"Name: {Name}, Desc: {Description}, Price: {Price}";
+            return v;
         }
     }
 }
