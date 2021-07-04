@@ -7,6 +7,7 @@ namespace UI
 {
     public class ShowCustomersMenu : IMenu
     {
+        private const string Value = "List of Customers";
         private ICustomersBL _stBL;
         public ShowCustomersMenu(ICustomersBL p_st)
         {
@@ -14,7 +15,7 @@ namespace UI
         }
         public void Menu()
         {
-            Console.WriteLine("List of Customers");
+            Console.WriteLine(value: Value);
 
             List<Customers> Customers = _custBL.GetAllStores();
 
